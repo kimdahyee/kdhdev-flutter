@@ -9,14 +9,25 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        child: ElevatedButton(
-          onPressed: () {
-            context.router.push(const AppRouterTestRoute());
-          },
-          child: const Text('app router'),
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              context.router.push(const AppRouterTestRoute());
+            },
+            child: const Text('app router'),
+          ),
+          const SizedBox(
+            height: 6,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.router.push(const RiverpodCounterRoute());
+            },
+            child: const Text('riverpod-counter'),
+          ),
+        ],
       ),
     );
   }
