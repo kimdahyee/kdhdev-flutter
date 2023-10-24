@@ -33,6 +33,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const RiverpodCounterPage(),
       );
     },
+    RiverpodRandomNumberRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const RiverpodRandomNumberPage(),
+      );
+    },
   };
 }
 
@@ -74,6 +80,20 @@ class RiverpodCounterRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'RiverpodCounterRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [RiverpodRandomNumberPage]
+class RiverpodRandomNumberRoute extends PageRouteInfo<void> {
+  const RiverpodRandomNumberRoute({List<PageRouteInfo>? children})
+      : super(
+          RiverpodRandomNumberRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'RiverpodRandomNumberRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:kdhdev/route/app_router.dart';
 
 void main() {
-  // Adding ProviderScope enables Riverpod for the entire project
+  // riverpod을 사용하려면 ProviderSccope로 runApp 아래에 있는 전체 프로젝트를 한 번 감싸줘야해
   runApp(
     const ProviderScope(
       child: MyApp(),

@@ -27,6 +27,15 @@ class MainPage extends StatelessWidget {
             },
             child: const Text('riverpod-counter'),
           ),
+          const SizedBox(
+            height: 6,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.router.push(const RiverpodRandomNumberRoute());
+            },
+            child: const Text('riverpod-random-number'),
+          ),
         ],
       ),
     );
