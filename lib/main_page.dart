@@ -36,6 +36,15 @@ class MainPage extends StatelessWidget {
             },
             child: const Text('riverpod-random-number'),
           ),
+          const SizedBox(
+            height: 6,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.router.push(const RiverpodRetrofitRoute());
+            },
+            child: const Text('riverpod-retrofit'),
+          ),
         ],
       ),
     );

@@ -3,6 +3,7 @@ import 'package:kdhdev/approutertest/app_router_test_page.dart';
 import 'package:kdhdev/main_page.dart';
 import 'package:kdhdev/riverpodcountertest/riverpod_counter_page.dart';
 import 'package:kdhdev/riverpodrandomnumbertest/riverpod_random_number_page.dart';
+import 'package:kdhdev/riverpodretrofittest/retrofit_test_page.dart';
 
 part 'app_router.gr.dart';
 
@@ -14,5 +15,6 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: AppRouterTestRoute.page),
         AutoRoute(page: RiverpodCounterRoute.page),
         AutoRoute(page: RiverpodRandomNumberRoute.page),
+        AutoRoute(page: RiverpodRetrofitRoute.page),
       ];
 }
