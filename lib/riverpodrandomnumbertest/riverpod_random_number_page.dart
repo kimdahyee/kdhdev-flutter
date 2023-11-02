@@ -9,15 +9,43 @@ class RiverpodRandomNumberPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final randomNumber = ref.watch(randomNumberProvider);
-    final randomNumberNotifier = ref.read(randomNumberProvider.notifier);
+    // final randomNumber = ref.watch(randomNumberProvider);
+    // observe
+    // kyk / build / provider
+    // kyk / build / widget
+    // kyk / asis = 0 / tobe = 8412
+    // kyk / build / widget
+    // final randomNumberNotifier = ref.read(randomNumberProvider.notifier);
+    // controller
+    // kyk / build / provider
+    // kyk / build / widget
+    // kyk / asis = 0 / tobe = 3219
+    // kyk / asis = 3219 / tobe = 7900
+    // kyk / asis = 7900 / tobe = 2779
+
+    print('kyk / build / widget');
 
     return Scaffold(
       body: Center(
-        child: Text('$randomNumber'),
+        // child: Text('$randomNumber'),
+        child: Text(''),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => randomNumberNotifier.generate(),
+        // onPressed: () => randomNumberNotifier.generate(),
+
+        // onPressed: () => ref.read(randomNumberProvider.notifier).generate(),
+        // kyk / build / widget
+        // kyk / build / provider
+        // kyk / asis = 0 / tobe = 2298
+        // kyk / build / provider
+        // kyk / asis = 0 / tobe = 2602
+        // kyk / build / provider
+        // kyk / asis = 0 / tobe = 4536
+
+        onPressed: () {
+          int a = ref.read(randomNumberProvider);
+          print('kyk / provider read = $a');
+        },
         child: const Icon(Icons.check),
       ),
     );

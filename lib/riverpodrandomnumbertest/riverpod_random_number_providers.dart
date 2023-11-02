@@ -7,9 +7,14 @@ part 'riverpod_random_number_providers.g.dart';
 @riverpod
 class RandomNumber extends _$RandomNumber {
   @override
-  int build() => 0;
+  int build() {
+    print('kyk / build / provider');
+    return 0;
+  }
 
   void generate() {
-    state = Random().nextInt(9999);
+    final random = Random().nextInt(9999);
+    print('kyk / asis = $state / tobe = $random');
+    state = random;
   }
 }
